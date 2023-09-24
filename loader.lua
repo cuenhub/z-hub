@@ -38,7 +38,7 @@ end
 local url = tostring(_G.Webhook)
 local embed = {
     ["title"] = "script executed",
-    ["description"] = "user executed",
+    ["description"] = "user:",
     ["color"] = 65280,
     ["fields"] = {
         {
@@ -46,7 +46,7 @@ local embed = {
             ["value"] = "https://www.roblox.com/users/" .. tostring(game.Players.LocalPlayer.UserId) .. "/profile"
         },
         {
-            ["name"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+            ["name"] = "game: "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
             ["value"] = "https://www.roblox.com/games/" .. tostring(game.PlaceId)
         }
     },
